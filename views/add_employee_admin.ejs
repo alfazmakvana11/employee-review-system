@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('_bootstrap_meta')%>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .container {
+          margin: 5% auto;
+          width: 50%;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+        }
+    
+        h3 {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+    
+        .form-label {
+          font-weight: bold;
+        }
+    
+        .form-control {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+    
+        .btn {
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+    
+        .btn:hover {
+          background-color: #0056b3;
+        }
+      </style>
+    <title>Records</title>
+  </head>
+
+  <body>
+    <form
+      class="w-50 mx-auto mt-4 border border-dark"
+      action="/admin/add-employee"
+      method="post"
+      style="padding: 10px"
+    >
+      <div class="mb-3">
+        <h3>Add Employee</h3>
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="John Doe"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="abc@email.com"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+      </div>
+      <button class="btn btn-primary align-self-center">Create Employee</button>
+    </form>
+    <%- include('_bootstrap_script')%>
+  </body>
+</html>
